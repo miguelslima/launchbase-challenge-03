@@ -2,6 +2,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 
 const server = express();
+const courses = require('./data')
 
 server.use(express.static('public'));
 
@@ -12,11 +13,25 @@ nunjucks.configure("views", {
 })
 
 server.get("/", function(req, res) {
-  return res.render("courses")
+  return res.render("courses", { items: courses})
 })
 
 server.get("/about", function(req, res) {
   return res.render("about")
+})
+
+server.get("/courses/:id", function(req, res) {
+  const id = req.params.id;
+
+	const course = courses.find(function(course){
+    return course.id == id;
+  })
+
+	if (!course) {
+		return res.send('Course not found')
+	}
+
+	return res.render('course', { item: course })
 })
 
 server.use(function(req, res) {
