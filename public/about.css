@@ -1,0 +1,90 @@
+@import "https://fonts.googleapis.com/css?family=Roboto&display=swap";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #aaa;
+}
+
+header {
+  background: #bbb;
+  padding: 30px;
+  border: 1px solid #666;
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+body div a {
+  text-decoration: none;
+}
+
+body div a:hover {
+  color: red;
+  transition: color 700ms;
+}
+
+div a {
+  color: #fff;
+  margin: 30px;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+#wrapper img {
+  margin-top: 20px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid gold;
+}
+
+#wrapper h1 {
+  padding: 20px;
+  font-size: 36px;
+  text-decoration: underline gold;
+}
+
+#wrapper h2 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+#wrapper p {
+  margin-top: 8px;
+  font-size: 20px;
+  padding-bottom: 12px;
+  font-weight: bold;
+}
+
+#wrapper ul li {
+  list-style-type: none;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+ul li::before {
+  content: '✯';
+  color: gold;
+  position: relative;
+  top: 1px;
+  right: 5px;
+}
+
+#links-footer {
+  margin: 20px;
+  text-align: center;
+}
+
+#links-footer a {
+  font-size: 18px;
+  border-bottom: 1px solid gold;
+  margin: 0 24px;
+}
